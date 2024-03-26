@@ -33,7 +33,11 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <NavigationContainer>
         <GestureHandlerRootView style={{flex: 1}}>
-          <StatusBar barStyle={'light-content'} />
+          <StatusBar 
+            barStyle="light-content"
+            backgroundColor="transparent"
+            translucent
+          />
           <AuthProvider>
             <AppRoutes />
           </AuthProvider>

@@ -1,7 +1,7 @@
-import { RFValue } from "react-native-responsive-fontsize";
 import styled from "styled-components/native";
-import { Feather } from '@expo/vector-icons'
 import theme from "../../global/styles/theme";
+import { RFValue } from "react-native-responsive-fontsize";
+import { Feather } from '@expo/vector-icons'
 
 interface CategoryProps {
     isActive: boolean
@@ -9,22 +9,22 @@ interface CategoryProps {
 
 export const Container = styled.View`
     flex: 1;
-    background-color: ${({ theme }: any) => theme.colors.background};
+    background-color: ${( theme ).colors.background};
 `;
 
 export const Header = styled.View`
     width: 100%;
     height: ${RFValue(113)}px;
-    background-color: ${({ theme }: any) => theme.colors.primary};
+    background-color: ${( theme ).colors.primary};
     align-items: center;
     justify-content: flex-end;
     padding-bottom: 19px;
 `;
 
 export const Title = styled.Text`
-    font-family: ${({ theme }: any) => theme.fonts.regular};
+    font-family: ${( theme ).fonts.regular};
     font-size: ${RFValue(18)}px;
-    color: ${({ theme }: any) => theme.colors.shape};
+    color: ${( theme ).colors.shape};
 `;
 
 export const Category = styled.TouchableOpacity<CategoryProps>`
@@ -50,7 +50,7 @@ export const Name = styled.Text`
 export const Separator = styled.View`
     height: 1px;
     width: 100%;
-    background-color: ${({ theme }: any) => theme.colors.text};
+    background-color: ${( theme ).colors.text};
 `
 
 export const Footer = styled.View`

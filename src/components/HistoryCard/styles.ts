@@ -1,4 +1,5 @@
 import styled from "styled-components/native";
+import theme from "../../global/styles/theme";
 import { RFValue } from "react-native-responsive-fontsize";
 
 interface ContainerProps {
@@ -7,7 +8,7 @@ interface ContainerProps {
 
 export const Container = styled.View<ContainerProps>`
     width: 100%;
-    background-color: ${({ theme }: any) => theme.colors.shape};
+    background-color: ${( theme ).colors.shape};
     flex-direction: row;
     justify-content: space-between;
     padding: 13px 24px;
@@ -18,11 +19,11 @@ export const Container = styled.View<ContainerProps>`
 `;
 
 export const Title = styled.Text`
-    font-family: ${({ theme }: any) => theme.fonts.regular};
+    font-family: ${( theme ).fonts.regular};
     font-size: ${RFValue(15)}px;    
 `;
 
 export const Amount = styled.Text`
-    font-family: ${({ theme }: any) => theme.fonts.bold};
+    font-family: ${( theme ).fonts.bold};
     font-size: ${RFValue(15)}px;
 `;

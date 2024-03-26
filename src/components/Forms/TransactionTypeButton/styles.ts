@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components/native";
+import theme from "../../../global/styles/theme";
 import { RectButton } from "react-native-gesture-handler"; 
 import { Feather } from '@expo/vector-icons'
 import { RFValue } from "react-native-responsive-fontsize";
@@ -14,16 +15,16 @@ interface ContainerProps {
 
 export const Container = styled.View<ContainerProps>`
     width: 48%;
-    border: 1.5px solid ${({ theme }: any) => theme.colors.text};
+    border: 1.5px solid ${( theme ).colors.text};
     border-radius: 5px;
 
     ${({ isActive, type }: any) => isActive && type === 'up' && css`
-        background-color: ${({ theme }: any) => theme.colors.success_light};
+        background-color: ${( theme ).colors.success_light};
         border: none;
     `}
 
     ${({ isActive, type }: any) => isActive && type === 'down' && css`
-        background-color: ${({ theme }: any) => theme.colors.attention_light};
+        background-color: ${( theme ).colors.attention_light};
         border: none;
     `}
 `;
@@ -45,6 +46,6 @@ export const Icon = styled(Feather)<IconsProps>`
 `;
 
 export const Title = styled.Text`
-    font-family: ${({ theme }: any) => theme.fonts.regular};
+    font-family: ${( theme ).fonts.regular};
     font-size: ${RFValue(14)}px;
 `;

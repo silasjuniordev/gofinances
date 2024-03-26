@@ -1,13 +1,14 @@
-import { RFValue } from "react-native-responsive-fontsize";
 import styled from "styled-components/native";
+import theme from "../../global/styles/theme";
+import { RFValue } from "react-native-responsive-fontsize";
 
 export const Container = styled.View`
     flex: 1;
-    background-color: ${({ theme }: any) => theme.colors.background};
+    background-color: ${( theme ).colors.background};
 `;
 
 export const Header = styled.View`
-    background-color: ${({ theme }: any) => theme.colors.primary};
+    background-color: ${( theme ).colors.primary};
     width: 100%;
     height: ${RFValue(113)}px;
     align-items: center;
@@ -16,9 +17,9 @@ export const Header = styled.View`
 `;
 
 export const Title = styled.Text`
-    font-family: ${({ theme }: any) => theme.fonts.regular};
+    font-family: ${( theme ).fonts.regular};
     font-size: ${RFValue(18)}px;
-    color: ${({ theme }: any) => theme.colors.shape};
+    color: ${( theme ).colors.shape};
 `;
 
 export const Form = styled.View`

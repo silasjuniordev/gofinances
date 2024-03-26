@@ -1,5 +1,6 @@
-import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 import styled from "styled-components/native";
+import theme from "../../global/styles/theme";
+import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 
 export const Container = styled.View`
     flex: 1;
@@ -8,7 +9,7 @@ export const Container = styled.View`
 export const Header = styled.View`
     width: 100%;
     height: 70%;
-    background-color: ${({ theme }: any) => theme.colors.primary};
+    background-color: ${( theme ).colors.primary};
     justify-content: flex-end;
     align-items: center;
 `;
@@ -18,16 +19,16 @@ export const TitleWrapper  = styled.View`
 `;
 
 export const Title = styled.Text`
-    font-family: ${({ theme }: any) => theme.fonts.medium};
-    color: ${({ theme }: any) => theme.colors.shape};
+    font-family: ${( theme ).fonts.medium};
+    color: ${( theme ).colors.shape};
     font-size: ${RFValue(30)}px;
     text-align: center;
     margin-top: 45px;
 `;
 
 export const SignInTitle  = styled.Text`
-    font-family: ${({ theme }: any) => theme.fonts.regular};
-    color: ${({ theme }: any) => theme.colors.shape};
+    font-family: ${( theme ).fonts.regular};
+    color: ${( theme ).colors.shape};
     font-size: ${RFValue(16)}px;
     text-align: center;
     margin-top: 80px;
@@ -37,7 +38,7 @@ export const SignInTitle  = styled.Text`
 export const Footer = styled.View`
     width: 100%;
     height: 30%;
-    background-color: ${({ theme }: any) => theme.colors.secondary};
+    background-color: ${( theme ).colors.secondary};
 `;
 
 export const FooterWrapper = styled.View`

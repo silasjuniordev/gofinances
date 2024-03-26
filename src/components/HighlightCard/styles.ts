@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components/native";
+import theme from "../../global/styles/theme";
 import { Feather } from '@expo/vector-icons'
 import { RFValue } from "react-native-responsive-fontsize";
 
@@ -22,7 +23,7 @@ export const Header = styled.View`
 `;
 
 export const Title = styled.Text<TypeProps>`
-    font-family: ${({ theme }: any) => theme.fonts.regular};
+    font-family: ${( theme ).fonts.regular};
     font-size: ${RFValue(14)}px;
     color: ${({ theme, type }: any) => 
     type === 'total' ? theme.colors.shape : theme.colors.text_dark};
@@ -46,7 +47,7 @@ export const Icon = styled(Feather)<TypeProps>`
 export const Footer = styled.View``;
 
 export const Amount = styled.Text<TypeProps>`
-    font-family: ${({ theme }: any) => theme.fonts.medium};
+    font-family: ${( theme ).fonts.medium};
     font-size: ${RFValue(32)}px;
     color: ${({ theme, type }: any) => 
     type === 'total' ? theme.colors.shape : theme.colors.text_dark};
@@ -54,7 +55,7 @@ export const Amount = styled.Text<TypeProps>`
 `;
 
 export const LastTransaction = styled.Text<TypeProps>`
-    font-family: ${({ theme }: any) => theme.fonts.regular};
+    font-family: ${( theme ).fonts.regular};
     font-size: ${RFValue(12)}px;
     color: ${({ theme, type }: any) => 
     type === 'total' ? theme.colors.shape : theme.colors.text};
