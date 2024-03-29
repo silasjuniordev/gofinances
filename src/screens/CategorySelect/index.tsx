@@ -12,7 +12,6 @@ import {
 import { FlatList } from "react-native";
 import { categories } from "../../utils/categories";
 import { Button } from "../../components/Forms/Button";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 interface Category {
     key: string
@@ -31,7 +30,6 @@ export function CategorySelect({ category, setCategory, closeSelectCategory }: P
     }
 
     return (
-        <GestureHandlerRootView style={{ flex: 1 }}>
             <Container>
                 <Header>
                     <Title>Categoria</Title>
@@ -58,6 +56,5 @@ export function CategorySelect({ category, setCategory, closeSelectCategory }: P
                     />
                 </Footer>
             </Container>
-        </GestureHandlerRootView>
     )
 }

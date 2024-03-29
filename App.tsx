@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components/native';
 import { NavigationContainer } from '@react-navigation/native';
 import { AppRoutes } from './src/routes/app.routes';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import * as SplashScreen from 'expo-splash-screen'
 
 import { SignIn } from './src/screens/SignIn';
 
@@ -18,6 +19,8 @@ import {
 import theme from './src/global/styles/theme';
 import { AuthProvider } from './src/hooks/auth';
 
+SplashScreen.preventAutoHideAsync()
+
 export default function App() {
   const [fontsLoaded, fontError] = useFonts({
     Poppins_400Regular,
@@ -25,8 +28,8 @@ export default function App() {
     Poppins_700Bold
   })
 
-  if(!fontsLoaded && !fontError) {
-    return null
+  if(fontsLoaded) {
+    SplashScreen.hideAsync()
   }
   
   return (
@@ -39,7 +42,7 @@ export default function App() {
             translucent
           />
           <AuthProvider>
-            <AppRoutes />
+            { fontsLoaded && <AppRoutes /> }
           </AuthProvider>
         </GestureHandlerRootView>
       </NavigationContainer>
